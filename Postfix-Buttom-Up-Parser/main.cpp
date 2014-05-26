@@ -30,8 +30,8 @@ int pf_bu_parser(const string &expression)
             stack.push(add1 + add2);
         } else if (*exprit == '-' && stack.size() >= 2)
         {
-            const int sub = stack.top(); stack.pop();
             const int min = stack.top(); stack.pop();
+            const int sub = stack.top(); stack.pop();
             stack.push(sub - min);
         } else if (*exprit == '*' && stack.size() >= 2)
         {
@@ -40,8 +40,8 @@ int pf_bu_parser(const string &expression)
             stack.push(prod1*prod2);
         } else if (*exprit == '/' && stack.size() >= 2)
         {
-            const int divid = stack.top(); stack.pop();
             const int divis = stack.top(); stack.pop();
+            const int divid = stack.top(); stack.pop();
             stack.push(divid / divis);
         }
         
